@@ -12,4 +12,10 @@ function greet(name,lastName) {
 
 greet('Mario ', 'Luigi');
 
+function myFunction() {
+    var sentence = "Studying hard";
+    sentence += " for the JavaScript course.";
+    document.getElementById("Concatenate").innerHTML = sentence;
+}
+
 
