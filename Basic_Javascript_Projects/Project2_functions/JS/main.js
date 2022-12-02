@@ -6,10 +6,10 @@ function myFunction() {
 document.getElementById("demo").innerHTML = myFunction = greet3;
 }
 
-function greet(name) {
-    window.alert("knock KNOCK! " + name);
+function greet(name,lastName) {
+    window.alert('knock KNOCK! ' + name + lastName)
 }
 
-greet('Mario');
+greet('Mario ', 'Luigi');
 
 
