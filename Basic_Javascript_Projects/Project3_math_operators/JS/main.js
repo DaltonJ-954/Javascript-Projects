@@ -50,17 +50,20 @@ function dec_Op() {
     K--;
     document.getElementById("Dec").innerHTML = K--;
 }
+
+function getRandom() {
+    var randomNumber = Math.random();
+    document.getElementById("Ran").innerHTML = randomNumber;
+    }
+    
 // End off operator function and variables
 
 //Math Object variables
 function getRoot1Over2() {
     return Math.SQRT1_2;
   }
-  
-  console.log(getRoot1Over2());
-  
 
-  function getNatLog2() {
+function getNatLog2() {
     return Math.LN2;
   }
 
