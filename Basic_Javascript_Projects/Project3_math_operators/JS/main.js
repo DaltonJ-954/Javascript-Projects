@@ -21,6 +21,12 @@ function subtraction_Op() {
     document.getElementById("Sub").innerHTML = v - w;
 }
 
+function multiplication_Op() {
+    var X = 19;
+    var Z = 58;
+    document.getElementById("Multi").innerHTML = X * Z;
+}
+
 function division_Op() { 
     var hi = 354;
     var bye = 8;
