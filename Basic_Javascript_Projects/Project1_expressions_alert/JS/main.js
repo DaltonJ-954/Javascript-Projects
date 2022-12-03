@@ -1,7 +1,7 @@
 document.write("\"To be or not to be. "
 + "That is the defacto question isn\'t it?\" ");
 var W = " -The" + " Rock "
-document.write(W);
+document.write(W); // This an example of a variable return being displayed in the HTML
 
 document.write( 745 / 12);
 
