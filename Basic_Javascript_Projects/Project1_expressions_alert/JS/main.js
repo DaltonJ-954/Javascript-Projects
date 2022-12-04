@@ -12,5 +12,5 @@ function My_First_Function() { // This is an example of a function
 
 var Sent1 = (" This is the beginning of a string") // This is a variable
 var Sent2 = (" and this is the end of the string ") // Line is also a variable
-document.write(Sent1 + Sent2) // Lines 13 and 14 are concatenated is created to be read in html
+document.write(sent1 + Sent2) // Lines 13 and 14 are concatenated is created to be read in html
 window.alert(Sent1 + Sent2)  // Lines 13 and 14 are concatenated to display in a windows alert
