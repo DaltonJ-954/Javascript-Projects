@@ -10,8 +10,11 @@ function get_Date() {
 
 function Shooting_Per() {
     Make = document.getElementById("Make").value;
-    if (Make >= 15) {
-        Attempt = "You win a top prize!";
+    if (Make >= 25) {
+        Attempt = "You win a top prize!!";
+    }
+    else if (Make > 14) {
+        Attempt = "You win a prize!";
     }
     else {
         Attempt = "Start over you lost!";

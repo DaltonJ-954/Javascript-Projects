@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+    <head>
+<title>HTML Tutorial</title>
+<script src="JS/main.js"></script>
+</head>
+<body>
+    <div>
+        <p id="Assign"> Famous Quotes.</p>
+        <button onclick="my_Sentence()">Read Here</button>
+    </div>
+    <div>
+        <p id="Slice"></p>
+        <button onclick="slice_Method()">Click here!</button>
+    </div>
+    <div>
+        <p id="case"></p>
+        <script>
+            let text = "Hello World!";
+            let result = text.toUpperCase();
+
+            document.getElementById("case").innerHTML = result;
+        </script>
+    </div>
+    <div>
+        <p id="See"></p>
+        <script>
+            let words = "Mr. Rogers has a imagine-filled house on TV.";
+            let position = words.search("Rogers");
+
+            document.getElementById("See").innerHTML = position;
+        </script>
+    </div>
+    <div>
+        <p id="loot"></p>
+        <button onclick="string_Method()">Here!</button>
+    </div>
+    <div>
+        <p id="Precision"></p>
+        <button onclick="precision_Method()">Tap</button>
+    </div>
+    <div>
+        <p id="good"></p>
+        <button onclick="fixed_Function()">Press</button>
+    </div>
+    <div>
+        <p id="define"></p>
+        <button onclick="value_Function()">Push</button>
+    </div>
+
+</body>
+</html>
