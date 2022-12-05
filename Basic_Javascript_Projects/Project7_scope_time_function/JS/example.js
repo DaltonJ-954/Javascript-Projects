@@ -17,7 +17,7 @@ function Shooting_Per() {
         Attempt = "You win a prize!";
     }
     else {
-        Attempt = "Start over you lost!";
+        Attempt = "You lost! Start over!";
     }
     document.getElementById("Buckets").innerHTML = Attempt;
 }

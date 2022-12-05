@@ -16,5 +16,6 @@ document.write("10" + 5);
 document.write(10 >= 30 );
 document.write(12 < 27 );
 document.write(-3E310);
+document.write(1 === 1);
 
 console.log(28 / 2);
