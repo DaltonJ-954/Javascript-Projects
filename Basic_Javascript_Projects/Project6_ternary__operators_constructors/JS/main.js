@@ -20,4 +20,15 @@ function myFunction() {
     " manufactured in " + Jack.Vehicle_Year;
 }
 
-var X = 23;
+function myage(y) {
+            
+    document.write("My age is " +y);
+}
+
+function myname(x,y) {
+    
+    document.write("My name is John<br>");
+    myage(y);
+}
+myname("John",33);
+document.getElementsByTagName("nested"),innerHeight = myname(x,y);
