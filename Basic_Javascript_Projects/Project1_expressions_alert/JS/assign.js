@@ -4,7 +4,7 @@ function my_Dictionary() {
         Color:"Black",
         Breed:"Labrador",
         Age:5,
-        Sound:"Bark!"
+        Sound:"Bark!",
     };
-    document.getElementById("Dictionary").innerHTML = Animal.Breed;
+    document.getElementById("Dictionary").innerHTML = Animal.Species;
 }

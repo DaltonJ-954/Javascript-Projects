@@ -76,3 +76,20 @@ let car = {
     }
 };
 document.getElementsByTagName("revver").innerHTML = car.description();
+
+const names = ["Nontle", "Dalton", "Patrick", "Sylvia", "Donald", "Jaylen", "Paul"]; // This is an array list that has a loop function that searches for a specific value within the array.
+for (person of names) {
+    console.log(person);
+    if (person === "Sylvia") {
+        console.log("Sylvia is in my list!")
+        break; // A break function that stops the loop at a certain point in the code.
+    }
+}
+
+let loading = 0; // This is a "let" function
+
+while(loading < 100){ // This is a "while" function
+    console.log("Website is still loading");
+
+    loading++; // Loading value that has an assigned add + 1 function till it reaches a specific number.
+}
