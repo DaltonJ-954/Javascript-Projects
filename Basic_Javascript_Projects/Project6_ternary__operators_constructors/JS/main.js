@@ -2,7 +2,7 @@ function Drink_Function() {
     var Age, Cant_drink;
     Age = document.getElementById("Age").value;
     Can_drink = (Age < 21) ? "You are too young":"You are old enough";
-    document.getElementById("rules").innerHTML = Can_drink + " to ride ";
+    document.getElementById("rules").innerHTML = Can_drink + " to drink. ";
 }
 
 function Vehicle(Make, Model, Year, Color) {
@@ -30,5 +30,11 @@ function myname(x,y) {
     document.write("My name is John<br>");
     myage(y);
 }
-myname("John",33);
-document.getElementsByTagName("nested"),innerHeight = myname(x,y);
+
+function nested_function() { //A nest function is a function within a function.
+    document.getElementById("nested").innerHTML = count(); // Targets p element i.d. and calls the nested "count" function.
+    function count() { // This is a nested function.
+        var element = document.getElementById("nested1").innerHTML; // Gets the value from the nested1 p element i.d.
+        return element; // Returns the variable elements, a result of a nested function.
+    }
+}
