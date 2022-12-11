@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <h1>Inline Script</h1>
+       <p id="prac"></p> 
+
+       <script>
+        document.getElementById("prac").innerHTML = "Tech Academy!"
+       </script>
+
+        <p id="demo">Me!</p>
+        <script>
+        const years = [2003, 2019, 1988, 1964, 20017, 1923, 1734];
+        let someUnder1734 = years.some(myFunction);
+    
+        document.getElementById("demo").innerHTML = "Some under 1734 is " + someUnder1734;
+    
+        function myFunction(value, index, array) {
+        return value < 1734;
+        }
+        </script>
+
+    </body>
+</html>
