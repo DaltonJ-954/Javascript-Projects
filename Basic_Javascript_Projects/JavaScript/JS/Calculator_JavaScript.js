@@ -17,11 +17,11 @@ function Input_Digit(digit) {
     //to the key that was clicked on.
     if (Wait_Second_Operand === true) {
         Calculator.Display_Value = digit;
-        Calculator.Wait_Secod_Operand = false;
+        Calculator.Wait_Second_Operand = false;
     } else {
         //This overwrites Display_Value if the current value is 0
         //otherwise it adds onto it.
-        Calculator.Display_Value += DocumentTimeline;
+        Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
 
@@ -30,7 +30,7 @@ function Input_Decimal(dot) {
     //This ensures that accidental cllicking of the decimal point doesn't
     //cause bugs in the operation.
     if (Calculator.Wait_Second_Operand === true) return;
-    if (Calculator.Display_Value.includes(dot)) {
+    if (!Calculator.Display_Value.includes(dot)) {
         //We are saying that if the Display_Value does not contain a decimal point
         //we want to add a decimal point.
         Calculator.Display_Value += dot;
@@ -52,12 +52,12 @@ function Handle_Operator(Next_Operator) {
     }
     if (First_Operand == null) {
         Calculator.First_Operand = Value_of_Input;
-    } else if (operator) {//Checks if an operator already exist
+    } else if (operator) {//Checks if an operator already exists
         const Value_Now = First_Operand || 0;
         //If operator exists, property lookup is performed for the operator
         //in the Perform_Calculation object and the fucntion that matches the
         //operator is executed.
-        let result = Perform_Calculation[operator] (Value_Now, Value_of_Input);
+        let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
         //Here we add a fixed amount of numbers after the decimal.
         result = Number(result).toFixed (9);
         //This will remove any trailing 0's.
@@ -65,28 +65,28 @@ function Handle_Operator(Next_Operator) {
         Calculator.Display_Value = parseFloat(result);
         Calculator.First_Operand = parseFloat(result);
     }
-    Calculator.Wait_Secod_Operand = true;
+    Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
 }
 const Perform_Calculation = {
     '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
-    '*': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
-    '+': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
-    '-': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
-    '/': (First_Operand, Second_Operand) => Second_Operand
+    '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
+    '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
+    '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
+    '=': (First_Operand, Second_Operand) => Second_Operand
 };
 function Calculator_Reset() {
     Calculator.Display_Value = '0';
     Calculator.First_Operand = null;
     Calculator.Wait_Second_Operand = false;
-    Calculator.oprator = null;
+    Calculator.operator = null;
 }
 //This Function updates the calculator screen with the contents of Display_Value
 function Update_Display() {
 //Makes use of the calculator-screen class to target the
 //input tag in the HTML document.
 const display = document.querySelector('.calculator-screen');
-display_value = Calculator.Display_Value;
+display.value = Calculator.Display_Value;
 }
 
 Update_Display();
