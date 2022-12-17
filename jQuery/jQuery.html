@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+    <script>
+        //jQuery script to add functions or features DOM file in html
+    $(document).ready(function() {
+        $("html").append(
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+        $("#1").css({"color":"darkorchid"}); // Targets the css of id 1 paragrapgh
+        $("#1").click(function() {
+            $('h1').toggle(); // Toggle feature that hides the targeted element
+        });
+        $("#3").click(function() { //assigns a function to the paragraph 3 in the html
+            $('h1').fadeOut(); //Adds a fadeout effect to the targeted element
+        });
+    });
+    </script>
+    </body>
+</html>
