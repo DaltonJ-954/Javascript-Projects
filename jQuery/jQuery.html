@@ -21,12 +21,17 @@
         );
         $("#1").css({"color":"darkorchid"}); // Targets the css of id 1 paragrapgh
         $("#1").click(function() {
-            $('h1').toggle(); // Toggle feature that hides the targeted element
+            $('#2').toggle(); // Toggle feature that hides the targeted element
         });
         $("#3").click(function() { //assigns a function to the paragraph 3 in the html
             $('h1').fadeOut(); //Adds a fadeout effect to the targeted element
         });
     });
+    </script>
+    <script>
+        var animal = { "mammal":"Orca", "life-span":"90yrs", "habitat":"Ocean"};
+        var whale = JSON.stringify(animal);
+        alert(whale);
     </script>
     </body>
 </html>

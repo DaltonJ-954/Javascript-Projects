@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+<link rel="stylesheet" href="./css/pop.css">
+        <!-- A button to open the popup form -->
+<button class="open-button" onclick="openForm()">Sign In</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="user"><b>UserName</b></label>
+    <input type="text" placeholder="Enter User Name" name="user" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+    <!--Image used in keyframe-->
+    <img src="https://www.costumerealm.com/wp-content/uploads/2020/03/3.png" alt="">
+    <script src="./JS/form.js"></script>
+    </body>
+</html>

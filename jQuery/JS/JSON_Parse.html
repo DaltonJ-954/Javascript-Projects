@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title></title>
+    </head>
+    <body>
+        <p id="mycat"></p>
+
+        <script>
+            /* A JSON string variable*/
+        var cat = '{"name": "Slither", "breed":"Birman", "color": "White-Brown"}';
+        /* Converts the JSON string to a JavaScript object*/
+        var JSONstring = JSON.parse(cat);
+        document.getElementById("mycat").innerHTML = JSONstring.name + " is my" + JSONstring.color + " " + JSONstring.breed;
+        </script>
+
+        <script>
+            /* Set the datd as a key/value pair to be saved locally in youro browser */
+            localStorage.setItem("Breed", "Birman");
+            /* The use the key "Name" to return it's value "Slither"*/
+            document.getElementById("mycat").innerHTML = localStorage.getItem("Breed");
+        </script>
+    </body>
+</html>

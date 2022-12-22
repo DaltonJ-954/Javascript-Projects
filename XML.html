@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p id="XML_Example"></p>
+</body>
+<script>
+//Creates a text string
+var XML_Parser, XML_Document;
+
+var videoGames = "<gaming>" +
+"<title>God of War</title>" +
+"<publisher>Sony Interactive Studios</publisher>" +
+"<developer>Santa Monica Studios</developer>" +
+"<character>Kratos</character>" +
+"<year>2018</year>" +
+"</gaming>";
+//Creates an XML DOM parser
+XML_Parser = new DOMParser();
+
+//Creates a new XML DOM object using the text string
+XML_Document = XML_Parser.parseFromString(videoGames,"text/xml");
+
+document.getElementById("XML_Example").innerHTML =
+XML_Document.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+</script>
+</html>
