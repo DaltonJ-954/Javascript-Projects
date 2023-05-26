@@ -4,6 +4,11 @@
     margin: 10px auto;
 }
 
+.row {
+    padding: 3px, 3px, 3px, 3px;
+    margin: 2;
+}
+
 #frmMenu {
     width: 600px;
     height: 200px;

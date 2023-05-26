@@ -7,5 +7,5 @@ function my_List() { //name of function
         Length:"10ft"
     };
     delete Animal.Type; // This allows you to delete an array of code without going into the JS file
-    document.getElementById("List").innerHTML = Animal.Type;
+    document.getElementById("Animal").innerHTML = Animal.Type;
 }

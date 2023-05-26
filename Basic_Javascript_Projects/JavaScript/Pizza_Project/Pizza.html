@@ -7,60 +7,62 @@
         <link rel="stylesheet" type="text/css" href="./Pizza.CSS/Pizza.css">
     </head>
     <body>
-        <div id="menuBG">
-            <h1 style="margin: 0 0px 0 20px;"> Peenoli's Pizza Hub!</h1>
-            <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
-                <form id="frmMenu">
-                    <div class="menu left">
-                        <h3>Size:</h3>
-                        <input class="size" type="radio" name="Size"
-                            value="Personal Pizza">Personal Pizza<br>
-                        <input class="size" type="radio" name="Size"
-                            value="Small Pizza">Small Pizza<br>
-                        <input class="size" type="radio" name="Size"
-                            value="Medium Pizza">Medium Pizza<br>
-                        <input class="size" type="radio" name="Size"
-                            value="Large Pizza">Large Pizza<br>
-                        <input class="size" type="radio" name="Size"
-                            value="Extra Large Pizza" checked>Extra Large Pizza<br>
-                    </div>
-                    <div class="menu left">
-                        <h3>Vggies:</h3>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Peppers">Peppers<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Broccoli">Broccoli<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Extra Cheese">Extra Cheese<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Mushrooms">Mushrooms<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Onions">Onions<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Olives">Olives<br>
-                    </div>
-                    <div class="menu right">
-                        <h3>Meats:</h3>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Pepperoni">Pepperoni<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Sausage">Sausage<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Canadian Bacon">Canadian Bacon<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Ground Beef">Ground Beef<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Anchovy">Anchovy<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Chicken">Chicken<br>
-                        <input class="toppings" type="checkbox" name="Toppings"
-                            value="Ham">Ham<br>
-                    </div>
-                    <div id="cart">
-                        <div id="showText"></div>
-                        <div id="totalPrice"></div>
-                    </div>
-                </form>
+        <div class="row">
+            <div id="menuBG">
+                <h1 style="margin: 0 0px 0 20px;"> Peenoli's Pizza Hub!</h1>
+                <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+                    <form id="frmMenu">
+                        <div class="menu left">
+                            <h3>Size:</h3>
+                            <input class="size" type="radio" name="Size"
+                                value="Personal Pizza" title="per">Personal Pizza<br>
+                            <input class="size" type="radio" name="Size"
+                                value="Small Pizza" title="small">Small Pizza<br>
+                            <input class="size" type="radio" name="Size"
+                                value="Medium Pizza" title="med">Medium Pizza<br>
+                            <input class="size" type="radio" name="Size"
+                                value="Large Pizza" title="lar">Large Pizza<br>
+                            <input class="size" type="radio" name="Size"
+                                value="Extra Large Pizza" title="ex" checked>Extra Large Pizza<br>
+                        </div>
+                        <div class="menu left">
+                            <h3>Vggies:</h3>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Peppers" title="pep">Peppers<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Broccoli" title="broc">Broccoli<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Extra Cheese" title="ched">Extra Cheese<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Mushrooms" title="mush">Mushrooms<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Onions" title="oni">Onions<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Olives" title="oli">Olives<br>
+                        </div>
+                        <div class="menu right">
+                            <h3>Meats:</h3>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Pepperoni" title="pep">Pepperoni<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Sausage" title="saus">Sausage<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Canadian Bacon" title="bac">Canadian Bacon<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Ground Beef" title="beef">Ground Beef<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Anchovy" title="anch">Anchovy<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Chicken" title="chic"><Chicken<br>
+                            <input class="toppings" type="checkbox" name="Toppings"
+                                value="Ham" title="ham">Ham<br>
+                        </div>
+                        <div id="cart">
+                            <div id="showText"></div>
+                            <div id="totalPrice"></div>
+                        </div>
+                    </form>
+            </div>
         </div>
         <script src="./Pizza.JavaScript/Pizza.js" defer></script>
     </body>
