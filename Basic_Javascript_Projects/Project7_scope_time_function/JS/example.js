@@ -36,3 +36,12 @@ function Time_function() {
     }
     document.getElementById("Time_of_day").innerHTML = Reply;
 }
+
+function bearType() {
+    var BlackBear = 'Evil'
+    var PolarBear = 'Deadly'
+
+    console.log('The polar bear is the one alive'.PolarBear);
+}
+
+bearType();
