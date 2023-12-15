@@ -2,24 +2,25 @@
 <html lang="en">
     <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Pet Name</title>
     </head>
     <body>
+        <h1>Tel us what your pet's name is.</h1>
         <p id="mycat"></p>
 
         <script>
             /* A JSON string variable*/
-        var cat = '{"name": "Slither", "breed":"Birman", "color": "White-Brown"}';
+        var cat = '{"name": "Slither", "breed": "Birman", "color": "White-Brown"}';
         /* Converts the JSON string to a JavaScript object*/
         var JSONstring = JSON.parse(cat);
         document.getElementById("mycat").innerHTML = JSONstring.name + " is my" + JSONstring.color + " " + JSONstring.breed;
         </script>
 
         <script>
-            /* Set the datd as a key/value pair to be saved locally in youro browser */
-            localStorage.setItem("Breed", "Birman");
-            /* The use the key "Name" to return it's value "Slither"*/
-            document.getElementById("mycat").innerHTML = localStorage.getItem("Breed");
+            /* set the data as a key/value pair to be saved locally in your browser */
+            localstorage.setitem("breed", "Birman");
+            /* the use the key "name" to return it's value "slither"*/
+            document.getelementbyid("mycat").innerhtml = localstorage.getitem("breed");
         </script>
     </body>
 </html>
