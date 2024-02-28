@@ -16,7 +16,7 @@ btns.forEach((btn) => {
         }
 
         if (count > 0) {
-            counter.style.color = 'green'
+            counter.style.color = 'navy'
         }
 
         if(count < 0) {
@@ -24,7 +24,7 @@ btns.forEach((btn) => {
         }
 
         if(count === 0) {
-            counter.style.color = 'darkorchid'
+            counter.style.color = 'orange'
         }
 
         if(count < -20) {
@@ -32,7 +32,7 @@ btns.forEach((btn) => {
         }
 
         if(count > 20) {
-            alert("Keep it Coming!")
+            alert("Overload")
         }
 
         counter.textContent = count
