@@ -41,8 +41,10 @@ function percentage_Op() {
 
 function inc_Op() {
     var B = 45;
-    B++;
-    document.getElementById("Inc").innerHTML = B++;
+    var C = 0;
+    while (C != B)
+    C++;
+    document.getElementById("Inc").innerHTML = C++;
 }
 
 function dec_Op() {
