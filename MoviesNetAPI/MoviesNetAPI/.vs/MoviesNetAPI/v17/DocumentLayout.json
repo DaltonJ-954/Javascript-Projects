@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\source\\reactapps\\moviesnetapi\\moviesnetapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\source\\reactapps\\moviesnetapi\\moviesnetapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\source\\reactapps\\moviesnetapi\\moviesnetapi\\dtos\\moviesputgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\dtos\\moviesputgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:dtos\\moviesputgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,37 +28,35 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MoviesController.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "Controllers\\MoviesController.cs",
-              "ToolTip": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\MoviesController.cs",
               "RelativeToolTip": "Controllers\\MoviesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T02:15:44.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-08T02:15:44.425Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MoviesPutGetDTO.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\MoviesPutGetDTO.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\MoviesPutGetDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\MoviesPutGetDTO.cs",
-              "ToolTip": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\MoviesPutGetDTO.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\MoviesPutGetDTO.cs",
               "RelativeToolTip": "DTOs\\MoviesPutGetDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T02:15:39.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-08T02:15:39.502Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ActorsController.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\ActorsController.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\ActorsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ActorsController.cs",
-              "ToolTip": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\ActorsController.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\ActorsController.cs",
               "RelativeToolTip": "Controllers\\ActorsController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAAAIAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAIAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-08T00:19:15.526Z",
               "EditorCaption": ""

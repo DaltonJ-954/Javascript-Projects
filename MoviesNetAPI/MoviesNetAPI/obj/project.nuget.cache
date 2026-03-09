@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MGw1Ae3rTdM=",
+  "dgSpecHash": "fZFDVN7gC5k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\MoviesNetAPI.csproj",
+  "projectFilePath": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\MoviesNetAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\scall\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\scall\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",

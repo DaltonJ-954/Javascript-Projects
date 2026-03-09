@@ -5062,11 +5062,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\MoviesNetAPI.csproj",
+      "projectUniqueName": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\MoviesNetAPI.csproj",
       "projectName": "MoviesNetAPI",
-      "projectPath": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\MoviesNetAPI.csproj",
+      "projectPath": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\MoviesNetAPI.csproj",
       "packagesPath": "C:\\Users\\scall\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\scall\\source\\ReactApps\\MoviesNetAPI\\MoviesNetAPI\\obj\\",
+      "outputPath": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
