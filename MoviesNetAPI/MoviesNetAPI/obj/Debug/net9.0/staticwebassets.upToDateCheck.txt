@@ -195,3 +195,4 @@ wwwroot\movies\80c264ca-7f4c-464a-a5c5-f86bead47c13.jpg
 wwwroot\movies\9e1ce94d-b37d-4f54-87e0-73f097df2177.jpg
 wwwroot\movies\9f502f07-028c-4211-959e-b5ae40e89af4.jpg
 wwwroot\movies\b1c9cfec-310a-4742-9a8f-8f2bd700bf91.jpg
+wwwroot\actors\24f96ebe-badd-4c9c-8835-e3d76690dfe9.jpg
