@@ -139,7 +139,7 @@ namespace MoviesNetAPI.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(int id, [FromBody] MovieCreationDTO movieCreationDTO)
+        public async Task<ActionResult> Put(int id, [FromForm] MovieCreationDTO movieCreationDTO)
         {
             var movie = await context.Movies
                 .Include(p => p.MoviesActors)

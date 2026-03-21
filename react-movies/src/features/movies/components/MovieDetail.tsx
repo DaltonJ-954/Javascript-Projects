@@ -6,7 +6,7 @@ export default function MovieDetail() {
 
     return (
         <>
-            <h3>Movie Detail: { id }</h3>
+            <h3>Movie Detail: { id } : undefined</h3>
         </>
     )
 }

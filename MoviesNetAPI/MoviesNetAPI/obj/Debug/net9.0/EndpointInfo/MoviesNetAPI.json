@@ -547,23 +547,80 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "GenresIds",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          {
+            "name": "TheatersIds",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          {
+            "name": "Actors",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ActorMovieCreationDTO"
+              }
+            }
           }
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/MovieCreationDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/MovieCreationDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/MovieCreationDTO"
+                "required": [
+                  "Title"
+                ],
+                "type": "object",
+                "properties": {
+                  "Title": {
+                    "maxLength": 300,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Trailer": {
+                    "type": "string"
+                  },
+                  "ReleaseDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Poster": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "Title": {
+                  "style": "form"
+                },
+                "Trailer": {
+                  "style": "form"
+                },
+                "ReleaseDate": {
+                  "style": "form"
+                },
+                "Poster": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -631,6 +688,16 @@
                 "format": "int32"
               }
             }
+          },
+          {
+            "name": "Actors",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ActorMovieCreationDTO"
+              }
+            }
           }
         ],
         "requestBody": {
@@ -657,12 +724,6 @@
                   "Poster": {
                     "type": "string",
                     "format": "binary"
-                  },
-                  "Actors": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/ActorMovieCreationDTO"
-                    }
                   }
                 }
               },
@@ -677,9 +738,6 @@
                   "style": "form"
                 },
                 "Poster": {
-                  "style": "form"
-                },
-                "Actors": {
                   "style": "form"
                 }
               }
@@ -1033,56 +1091,6 @@
           },
           "character": {
             "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "MovieCreationDTO": {
-        "required": [
-          "title"
-        ],
-        "type": "object",
-        "properties": {
-          "title": {
-            "maxLength": 300,
-            "minLength": 0,
-            "type": "string"
-          },
-          "trailer": {
-            "type": "string",
-            "nullable": true
-          },
-          "releaseDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "poster": {
-            "type": "string",
-            "format": "binary",
-            "nullable": true
-          },
-          "genresIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "theatersIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "actors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActorMovieCreationDTO"
-            },
             "nullable": true
           }
         },

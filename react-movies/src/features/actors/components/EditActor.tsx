@@ -33,7 +33,7 @@ export default function EditActor() {
     const onSubmit: SubmitHandler<ActorCreation> = async (data) => {
         try {
             await apiClient.putForm(`/actors/${ id }`, data);
-            navigate('/actors/');
+            navigate('/actors');
         } catch (err) {
             const errors = extractErrors(err as AxiosError);
             setErrors(errors);
