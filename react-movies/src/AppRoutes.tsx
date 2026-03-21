@@ -33,7 +33,7 @@ export default function AppRoutes() {
           <Route path="/theaters/edit/:id" element={<EditTheater />} />
 
           <Route path="/movies/filter" element={<FilterMovies />} />
-          <Route path="/movie" element={<MovieDetail />} />
+          <Route path="/movie/:id" element={<MovieDetail />} />
           <Route path="/movies/create" element={<CreateMovie />} />
           <Route path="/movies/edit/:id" element={<EditMovie />} />
 

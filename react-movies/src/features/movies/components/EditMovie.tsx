@@ -36,7 +36,7 @@ export default function EditMovie() {
     const onSubmit: SubmitHandler<MovieCreation> = async (data) => {
         try {
             const formData = convertMovieToFormData(data);
-            await apiClient.putForm(`/movies/${id}`, formData);
+            await apiClient.putForm(`/movies/${ id }`, formData);
             navigate(`/movies/${ id }`);
         }
         catch (err) {

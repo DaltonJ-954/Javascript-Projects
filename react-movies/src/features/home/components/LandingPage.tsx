@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
 import MoviesList from "../../movies/components/MoviesList";
 import type Movie from "../../movies/models/movie.model";
-import type LandingPageDTO from "./LandingPageDTO";
 import apiClient from "../../../api/apiClient";
+import type LandingPageDTO from "../models/LandingPageDTO";
+import AlertContext from "../../../utils/AlertContext";
 
 export default function LandingPage() {
 
     const [movies, setMovies] = useState<LandingPageDTO>({})
 
-  useEffect(() => {
-      apiClient.get<LandingPageDTO>('/movies/landing').then(res => {
-          setMovies(res.data);
-  });
+    function loadRecords() {
+        apiClient.get<LandingPageDTO>('/movies/landing').then(res => {
+            setMovies(res.data);
+        });
+    }
+
+    useEffect(() => {
+
     const inTheaters: Movie[] = [
     {
       id: 1,
@@ -204,15 +209,17 @@ export default function LandingPage() {
       UpcomingReleases: upcomingReleases
     })
   }, 700);
+    loadRecords();
   }, [])
 
     return (
         <>
-            <h3>In Theaters</h3>
-                  <MoviesList movies={movies.InTheaters} />,
-            
-                  <h3>Upcoming Releases</h3>
-                  <MoviesList movies={movies.UpcomingReleases} />
+            <AlertContext.Provider value={ () => loadRecords() }>
+                <h1>In Theaters</h1>
+                <MoviesList movies={ movies.InTheaters } />
+                <h1>Upcoming Releases</h1>
+                <MoviesList movies={ movies.UpcomingReleases } />
+            </AlertContext.Provider>
         </>
     )
 }
