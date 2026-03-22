@@ -46,7 +46,7 @@ export default function TheaterForm(props: TheaterFormProps) {
                 </div>
 
                 <div className="mt-4">
-                    <Map coordinates={ transformCoordinate() } setCoordinate={ coordinate => {
+                    <Map allowClicks={ true } coordinates={ transformCoordinate() } setCoordinate={ coordinate => {
                         setValue('latitude', coordinate.lat, {
                             shouldValidate: true
                         })

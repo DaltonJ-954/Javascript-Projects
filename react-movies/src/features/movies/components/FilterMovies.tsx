@@ -1,40 +1,29 @@
 import { useForm, type SubmitHandler } from "react-hook-form"
 import type FilterMoviesDTO from "../models/FilterMoviesDTO.model"
-import type Genre from "../../genres/models/Genre.model";
 import Button from "../../../components/Button";
+import MoviesList from "./MoviesList";
+import Pagination from "../../../components/Pagination";
+import useFilterMovies from "../hooks/useFilterMovies";
 
 export default function FilterMovies() {
 
-    const { register, handleSubmit, reset, formState: { isSubmitting }} = useForm<FilterMoviesDTO>() 
+    
+    const initialValues: FilterMoviesDTO = {
+        title: '',
+        genreId: 0,
+        inTheaters: false,
+        upcomingReleases: false
+    }
+    
+    const { register, handleSubmit, reset, setValue, formState: { isSubmitting }} = useForm<FilterMoviesDTO>({
+        defaultValues: initialValues
+    }) 
 
     const onSubmit: SubmitHandler<FilterMoviesDTO> = async (data) => {
-        await new Promise(resolve => setTimeout(resolve, 500));
-        console.log(data)
-        reset();
+        await useFilterMoviesHook.loadRecords(data);
     }
 
-    const genres: Genre[] = [
-        { id: 1, name: 'Sci-Fi' },
-        { id: 2, name: 'Action' },
-        { id: 3, name: 'Drama' },
-        { id: 4, name: 'Comedy' },
-        { id: 5, name: 'Thriller' },
-        { id: 6, name: 'Horror' },
-        { id: 7, name: 'Romance' },
-        { id: 8, name: 'Adventure' },
-        { id: 9, name: 'Fantasy' },
-        { id: 10, name: 'Mystery' },
-        { id: 11, name: 'Crime' },
-        { id: 12, name: 'Animation' },
-        { id: 13, name: 'Family' },
-        { id: 14, name: 'Biography' },
-        { id: 15, name: 'History' },
-        { id: 16, name: 'War' },
-        { id: 17, name: 'Music' },
-        { id: 18, name: 'Sport' },
-        { id: 19, name: 'Western' },
-        { id: 20, name: 'Documentary' }
-        ];
+    const useFilterMoviesHook = useFilterMovies(initialValues, setValue);
 
     return (
         <>
@@ -49,7 +38,8 @@ export default function FilterMovies() {
                 <div className="col-12">
                     <select className="form-select" { ...register('genreId')}>
                         <option value='0'>--Select a Genre--</option>
-                        { genres.map(genre => <option key={ genre.id } value={ genre.id }>{ genre.name }</option>) }
+                        { useFilterMoviesHook.genres.map(genre => <option 
+                            key={ genre.id } value={ genre.id }>{ genre.name }</option>) }
                     </select>
                 </div>
 
@@ -78,13 +68,32 @@ export default function FilterMovies() {
                         { isSubmitting ? 'Filtering' : 'Filter'}
                     </Button>
                 
-                    <Button type="button" onClick={() => reset ()}>
+                    <Button className="btn btn-danger ms-2" type="button" onClick={() => {
+                        reset();
+                        useFilterMoviesHook.loadRecords(initialValues);
+                    }}>
                             Reset
                     </Button>
 
                 </div>
 
             </form>
+
+            <div className="mt-4">
+                <Pagination currentPage={ useFilterMoviesHook.page }
+                recordsPerPage={ useFilterMoviesHook.recordsPerPage }
+                    totalAmountOfRecords={ useFilterMoviesHook.totalAmountOfRecords }
+                    recordsPerPageOptions={ [5, 15, 25, 50] }
+                    onPaginateChange={ (page, recordsPerPage) => {
+                        useFilterMoviesHook.setPage(page);
+                        useFilterMoviesHook.setRecordsPerPage(recordsPerPage);
+                    } }
+                />
+            </div>
+
+            <div className="mt-4">
+                <MoviesList movies={ useFilterMoviesHook.movies } />
+            </div>
         </>
     )
 }

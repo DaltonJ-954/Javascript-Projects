@@ -4,9 +4,9 @@ import Loading from "./Loading";
 export default function GenericList<T>(props: GenericListProps<T>) {
 
     if (!props.list) {
-        return props.loadingUI ? <>{props.loadingUI}</> : <Loading />
+        return props.loadingUI ? <>{ props.loadingUI }</> : <Loading />
     } else if (props.list.length === 0) {
-        return props.emptyListUI ? <>{props.emptyListUI}</> : 'There are no items to display'
+        return props.emptyListUI ? <>{ props.emptyListUI }</> : 'There are no items to display'
     } else {
         return props.children;
     }

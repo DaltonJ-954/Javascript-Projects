@@ -3,7 +3,6 @@ import type MovieCreation from "../models/MovieCreation.model";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import firstLetterUppercase from "../../../validations/firstLetterUppercase";
-import noDateFromFuture from "../../../validations/noDateFromFuture";
 import SelectImage from "../../../components/SelectImage/SelectImage";
 import Button from "../../../components/Button";
 import { NavLink } from "react-router";
@@ -143,5 +142,5 @@ interface MovieFormProps {
 
 const validationRules = yup.object({
     title: yup.string().required('The title is required').test(firstLetterUppercase()),
-    releaseDate: yup.string().required('The release date is required').test(noDateFromFuture())
+    releaseDate: yup.string().required('The release date is required')
 })

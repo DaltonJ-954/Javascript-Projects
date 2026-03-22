@@ -268,6 +268,26 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MoviesNetAPI.Controllers.GenresController",
+    "Method": "Get",
+    "RelativePath": "api/genres/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MoviesNetAPI.DTOs.GenreDTO, MoviesNetAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MoviesNetAPI.Controllers.MoviesController",
     "Method": "Post",
     "RelativePath": "api/movies",
@@ -406,6 +426,57 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoviesNetAPI.Controllers.MoviesController",
+    "Method": "Filter",
+    "RelativePath": "api/movies/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecordsPerPage",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GenreId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "InTheaters",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpcomingReleases",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MoviesNetAPI.DTOs.MovieDTO, MoviesNetAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "MoviesNetAPI.Controllers.MoviesController",

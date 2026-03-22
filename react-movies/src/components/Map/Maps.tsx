@@ -14,12 +14,12 @@ export default function Map(props: MapsProps) {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
-            <HandleMapClick setCoordinate={ coordinate => {
+            { props.allowClicks ? <HandleMapClick setCoordinate={ coordinate => {
                 setCoordinates([coordinate]);
                 if (props.setCoordinate) {
                     props.setCoordinate(coordinate);
                 }
-            } } />
+            } } /> : undefined }
 
             { coordinates?.map(coordinate => <Marker key={ coordinate.lat + coordinate.lng }
                 position={[coordinate.lat, coordinate.lng]}
@@ -34,6 +34,7 @@ export default function Map(props: MapsProps) {
 interface MapsProps {
     coordinates?: Coordinate[];
     setCoordinate?: (coordinate: Coordinate) => void;
+    allowClicks: boolean;
 }
 
 function HandleMapClick(props: { setCoordinate(coordinate: Coordinate): void }) {

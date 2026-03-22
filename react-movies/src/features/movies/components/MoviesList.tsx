@@ -18,5 +18,5 @@ export default function MoviesList(props: MoviesListProps) {
 }
 
 interface MoviesListProps {
-    movies?: Movie[];
+    movies: Movie[] | undefined;
 }
