@@ -6,7 +6,7 @@ export default interface Movie {
     id: number;
     title: string;
     poster: string;
-    releaseDate?: string;
+    releaseDate: string;
     trailer: string;
     genres?: Genre[];
     theaters?: Theater[];

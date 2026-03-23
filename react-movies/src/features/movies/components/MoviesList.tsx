@@ -5,8 +5,10 @@ import styles from './MoviesList.module.css';
 
 export default function MoviesList(props: MoviesListProps) {
 
+    console.log("MoviesList received:", props.movies); // 👈 put it here
+
     return ( 
-    <GenericList list={ props.movies }
+    <GenericList list={ props.movies }  
     
     emptyListUI={ <p>There are no movies to display.</p> }
     >

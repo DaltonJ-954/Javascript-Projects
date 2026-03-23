@@ -14,28 +14,35 @@ import CreateTheater from "./features/theaters/components/CreateTheater";
 import EditTheater from "./features/theaters/components/EditTheater";
 import IndexTheaters from "./features/theaters/components/IndexTheaters";
 import HandleRouteNotFound from "./features/home/components/HandleRouteNotFound";
+import ProtectRoute from "./features/security/components/ProtectRoute";
+
 
 export default function AppRoutes() {
     return (
         <Routes>
           <Route path="/" element={<LandingPage />} />
 
-          <Route path="/genres" element={<IndexGenres />} />
-          <Route path="/genres/create" element={<CreateGenre />} />
-          <Route path="/genres/edit/:id" element={<EditGenre />} />
+          <Route element={ <ProtectRoute claims={ ["isAdmin"] } /> }>
+                <Route path="/genres" element={<IndexGenres />} />
+                <Route path="/genres/create" element={<CreateGenre />} />
+                <Route path="/genres/edit/:id" element={<EditGenre />} />
 
-          <Route path="/actors" element={<IndexActors />} />
-          <Route path="/actors/create" element={<CreateActor />} />
-          <Route path="/actors/edit/:id" element={<EditActor />} />
+                <Route path="/actors" element={<IndexActors />} />
+                <Route path="/actors/create" element={<CreateActor />} />
+                <Route path="/actors/edit/:id" element={<EditActor />} />
 
-          <Route path="/theaters" element={<IndexTheaters />} />
-          <Route path="/theaters/create" element={<CreateTheater />} />
-          <Route path="/theaters/edit/:id" element={<EditTheater />} />
+                <Route path="/theaters" element={<IndexTheaters />} />
+                <Route path="/theaters/create" element={<CreateTheater />} />
+                <Route path="/theaters/edit/:id" element={<EditTheater />} />
+
+                <Route path="/movies/create" element={<CreateMovie />} />
+                <Route path="/movies/edit/:id" element={<EditMovie />} />
+          </Route>
+
+          
 
           <Route path="/movies/filter" element={<FilterMovies />} />
           <Route path="/movie/:id" element={<MovieDetail />} />
-          <Route path="/movies/create" element={<CreateMovie />} />
-          <Route path="/movies/edit/:id" element={<EditMovie />} />
 
           <Route path="*" element={<HandleRouteNotFound />} />
         </Routes>

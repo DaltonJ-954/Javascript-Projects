@@ -6,6 +6,7 @@ import customConfirm from "../../../utils/customConfirm";
 import apiClient from "../../../api/apiClient";
 import AlertContext from "../../../utils/AlertContext";
 import { useContext } from "react";
+import Authorized from "../../security/components/Authorized";
 
 export default function DisplayMovie(props: DisplayMovieProps) {
 
@@ -26,8 +27,15 @@ async function deleteMovie() {
                 <NavLink to={ buildLink() }>{ props.movie.title }</NavLink>
             </p>
             <div>
-                <NavLink to={ `/movies/edit/${ props.movie.id }` } className='btn btn-primary'>Edit</NavLink>
-                <Button className="btn btn-danger ms-4" onClick={ () => customConfirm(() => deleteMovie()) }>Delete</Button>
+
+                <Authorized claims={ ['isAdmin'] } 
+                    authorized={ <>
+                        <NavLink to={ `/movies/edit/${ props.movie.id }` } className='btn btn-primary'>Edit</NavLink>
+                        <Button className="btn btn-danger ms-4" onClick={ () => customConfirm(() => deleteMovie()) }>Delete</Button>
+                    </> }
+                />
+
+                
             </div>
         </div>
     )

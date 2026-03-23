@@ -1,6 +1,6 @@
 import type Movie from "../../movies/models/movie.model";
 
 export default interface LandingPageDTO {
-    InTheaters: Movie[];
-    UpcomingReleases: Movie[];
+    inTheaters: Movie[];
+    upcomingReleases: Movie[];
 }

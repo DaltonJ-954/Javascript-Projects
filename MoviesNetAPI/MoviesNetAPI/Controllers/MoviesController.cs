@@ -36,19 +36,17 @@ namespace MoviesNetAPI.Controllers
         public async Task<ActionResult<LandingDTO>> Get()
         {
             var today = DateTime.Today;
-            var top = 6;
 
             var upcomingReleases = await context.Movies
                 .Where(m => m.ReleaseDate > today)
                 .OrderBy(m => m.ReleaseDate)
-                .Take(top)
                 .ProjectTo<MovieDTO>(mapper.ConfigurationProvider)
                 .ToListAsync();
 
             var inTheaters = await context.Movies
-                .Where(m => m.MoviesTheaters.Select(mt => mt.MovieId).Contains(m.Id))
+                .Where(m => m.ReleaseDate <= today &&
+                            m.MoviesTheaters.Any())
                 .OrderBy(m => m.ReleaseDate)
-                .Take(top)
                 .ProjectTo<MovieDTO>(mapper.ConfigurationProvider)
                 .ToListAsync();
 
