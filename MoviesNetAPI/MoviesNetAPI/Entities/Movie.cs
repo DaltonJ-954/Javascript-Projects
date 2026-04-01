@@ -14,8 +14,8 @@ namespace MoviesNetAPI.Entities
         public DateTime ReleaseDate { get; set; }
         [Unicode(false)]
         public string? Poster { get; set; }
-        public List<MovieGenre> MoviesGenres { get; set; } = new List<MovieGenre>();
-        public List<MovieTheater> MoviesTheaters { get; set; } = new List<MovieTheater>();
-        public List<MovieActor> MoviesActors { get; set; } = new List<MovieActor>();
+        public List<MovieGenre> MoviesGenres { get; set; } = [];
+        public List<MovieTheater> MoviesTheaters { get; set; } = [];
+        public List<MovieActor> MoviesActors { get; set; } = [];
     }
 }

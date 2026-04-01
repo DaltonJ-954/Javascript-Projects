@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.EntityFrameworkCore;
@@ -13,26 +15,30 @@ namespace MoviesNetAPI.Controllers
 {
     [Route("api/movies")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class MoviesController : ControllerBase
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
         private readonly IOutputCacheStore outputCacheStore;
         private readonly IFileStorage fileStorage;
+        private readonly IUsersService usersService;
         private const string cacheTag = "movies";
         private readonly string container = "movies";
 
         public MoviesController(ApplicationDbContext context, IMapper mapper,
-            IOutputCacheStore outputCacheStore, IFileStorage fileStorage)
+            IOutputCacheStore outputCacheStore, IFileStorage fileStorage, IUsersService usersService)
         {
             this.context = context;
             this.mapper = mapper;
             this.outputCacheStore = outputCacheStore;
             this.fileStorage = fileStorage;
+            this.usersService = usersService;
         }
 
         [HttpGet("landing")]
         [OutputCache(Tags = [cacheTag])]
+        [AllowAnonymous]
         public async Task<ActionResult<LandingDTO>> Get()
         {
             var today = DateTime.Today;
@@ -50,14 +56,17 @@ namespace MoviesNetAPI.Controllers
                 .ProjectTo<MovieDTO>(mapper.ConfigurationProvider)
                 .ToListAsync();
 
-            var result = new LandingDTO();
-            result.InTheaters = inTheaters;
-            result.UpcomingReleases = upcomingReleases;
+            var result = new LandingDTO
+            {
+                InTheaters = inTheaters,
+                UpcomingReleases = upcomingReleases
+            };
             return result;
         }
 
         [HttpGet("{id:int}", Name = "GetMovieById")]
         [OutputCache(Tags = [cacheTag])]
+        [AllowAnonymous]
         public async Task<ActionResult<MovieDetailsDTO>> Get(int id)
         {
             var movie = await context.Movies
@@ -69,10 +78,38 @@ namespace MoviesNetAPI.Controllers
                 return NotFound();
             }
 
+            var averageRate = 0.0;
+            var userVote = 0;
+
+            var movieIsRated = await context.MovieRating.AnyAsync(mr => mr.MovieId == id);
+
+            if (movieIsRated)
+            {
+                averageRate = await context.MovieRating.Where(mr => mr.MovieId == id)
+                    .AverageAsync(mr => mr.Rate);
+
+                if (HttpContext.User.Identity!.IsAuthenticated)
+                {
+                    var userId = await usersService.GetUserId();
+                    var ratingDb = await  context.MovieRating
+                        .FirstOrDefaultAsync(mr => mr.MovieId == id 
+                        && mr.UserId == userId);
+
+                    if (ratingDb is not null)
+                    {
+                        userVote = ratingDb.Rate;
+                    }
+                }
+            }
+
+            movie.AverageRate = averageRate;
+            movie.UserVote = userVote;
+
             return movie;
         }
 
         [HttpGet("filter")]
+        [AllowAnonymous]
         public async Task<ActionResult<List<MovieDTO>>> Filter([FromQuery] MoviesFilterDTO moviesFilterDTO)
         {
             var moviesQueryable = context.Movies.AsQueryable();
@@ -123,6 +160,7 @@ namespace MoviesNetAPI.Controllers
         [HttpPost]
         public async Task<CreatedAtRouteResult> Post([FromForm]MovieCreationDTO movieCreationDTO)
         {
+            Console.WriteLine(movieCreationDTO.Poster == null ? "NO FILE" : "FILE RECEIVED");
             var movie = mapper.Map<Movie>(movieCreationDTO);
 
             if (movieCreationDTO.Poster is not null)

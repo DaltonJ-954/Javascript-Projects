@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
 using MoviesNetAPI.DTOs;
@@ -8,6 +10,7 @@ namespace MoviesNetAPI.Controllers
 {
     [Route("api/theaters")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "isAdmin")]
     public class TheatersController : CustomBaseController
     {
         private readonly ApplicationDbContext context;

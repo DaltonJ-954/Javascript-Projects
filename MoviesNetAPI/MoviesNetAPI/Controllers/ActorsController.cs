@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +14,7 @@ namespace MoviesNetAPI.Controllers
 {
     [Route("api/actors")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "isAdmin")]
     public class ActorsController : CustomBaseController
     {
         private readonly ApplicationDbContext context;
@@ -73,6 +76,7 @@ namespace MoviesNetAPI.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<CreatedAtRouteResult> Post([FromForm] ActorCreationDTO actorCreationDTO)
         {
             var actor = mapper.Map<Actor>(actorCreationDTO);
@@ -91,6 +95,7 @@ namespace MoviesNetAPI.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [AllowAnonymous]
         public async Task<IActionResult> Put(int id, [FromForm] ActorCreationDTO actorCreationDTO)
         {
             var actor = await context.Actors.FirstOrDefaultAsync(a => a.Id == id);

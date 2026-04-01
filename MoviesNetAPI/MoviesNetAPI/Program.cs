@@ -5,6 +5,9 @@ using NetTopologySuite.Geometries;
 using NetTopologySuite;
 using AutoMapper;
 using MoviesNetAPI.Utilities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +43,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddOutputCache(options =>
 {
     options.DefaultExpirationTimeSpan = TimeSpan.FromSeconds(60);
+    options.AddPolicy(nameof(WithAuthorizeCachePolicy), WithAuthorizeCachePolicy.Instance);
 }); // Configure output caching options here if needed
 
 
@@ -58,22 +62,58 @@ builder.Services.AddSingleton(provider => new MapperConfiguration(config =>
 }).CreateMapper());
 
 builder.Services.AddTransient<IFileStorage, LocalFileStorage>();
+builder.Services.AddTransient<IUsersService, UsersService>();
+
+builder.Services.AddIdentityCore<IdentityUser>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<UserManager<IdentityUser>>();
+builder.Services.AddScoped<SignInManager<IdentityUser>>();
+
+builder.Services.AddAuthentication().AddJwtBearer(options =>
+{
+    options.MapInboundClaims = false;
+
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwtkey"]!)),
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("isAdmin", policy => policy.RequireClaim("isAdmin"));
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+using (var scope = app.Services.CreateScope())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    if (dbContext.Database.IsRelational())
+    {
+        dbContext.Database.Migrate();
+    }
 }
-app.UseHttpsRedirection();
+
+// Configure the HTTP request pipeline.
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseStaticFiles();
 
 app.UseCors();
 
 app.UseOutputCache();
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

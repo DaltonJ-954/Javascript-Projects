@@ -13,6 +13,14 @@
     ],
     "axe/aria": "off",
     "button-type": "off",
-    "compat-api/css": "off"
+    "compat-api/css": "off",
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "detect-css-reflows/composite": "off",
+    "detect-css-reflows/paint": "off"
   }
 }

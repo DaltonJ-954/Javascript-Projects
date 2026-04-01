@@ -1,19 +1,22 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
+using Microsoft.EntityFrameworkCore;
 using MoviesNetAPI.DTOs;
 using MoviesNetAPI.Entities;
 using MoviesNetAPI.Utilities;
-using System.Linq.Expressions;
 using System.Formats.Tar;
+using System.Linq.Expressions;
 
 namespace MoviesNetAPI.Controllers
 {
     [Route("api/genres")]
     [ApiController] // Mark the class as an API controller. This helps with validation for when binding parameters from the request.
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "isAdmin")]
     public class GenresController : CustomBaseController
     {
         private readonly IOutputCacheStore outputCacheStore;
@@ -31,7 +34,7 @@ namespace MoviesNetAPI.Controllers
         }
 
         [HttpGet] // api/genres
-        [OutputCache(Tags = [cacheTag])]
+        [OutputCache(Tags = [cacheTag], PolicyName = nameof(WithAuthorizeCachePolicy))]
         public async Task<List<GenreDTO>> Get([FromQuery] PaginationDTO pagination) 
         {
             return await Get<Genre, GenreDTO>(pagination, orderBy: g => g.Name);
@@ -47,6 +50,7 @@ namespace MoviesNetAPI.Controllers
 
         [HttpGet("all")]
         [OutputCache(Tags = [cacheTag])]
+        [AllowAnonymous]
         public async Task<List<GenreDTO>> Get()
         {
             return await Get<Genre, GenreDTO>(orderBy: g => g.Name);

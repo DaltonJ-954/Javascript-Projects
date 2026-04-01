@@ -1,7 +1,8 @@
 import React from "react";
 import type Claim from "../models/Claim.models";
 
-const AuthenticationContext = React.createContext<AuthenticationContextProps>({ claims: [], update: () => {}});
+const AuthenticationContext = React.createContext<AuthenticationContextProps>
+({ claims: [], update: () => {}});
 
 export default AuthenticationContext;
 

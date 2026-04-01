@@ -545,6 +545,22 @@
     ]
   },
   {
+    "ContainingType": "MoviesNetAPI.Controllers.RatingsController",
+    "Method": "Post",
+    "RelativePath": "api/ratings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ratingCreationDTO",
+        "Type": "MoviesNetAPI.DTOs.RatingCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MoviesNetAPI.Controllers.TheatersController",
     "Method": "Get",
     "RelativePath": "api/theaters",
@@ -654,5 +670,120 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoviesNetAPI.Controllers.UsersController",
+    "Method": "Logging",
+    "RelativePath": "api/users/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCredentialsDTO",
+        "Type": "MoviesNetAPI.DTOs.UserCredentialsDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MoviesNetAPI.DTOs.AuthenticationResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoviesNetAPI.Controllers.UsersController",
+    "Method": "MakeAdmin",
+    "RelativePath": "api/users/makeadmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editClaimDTO",
+        "Type": "MoviesNetAPI.DTOs.EditClaimDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoviesNetAPI.Controllers.UsersController",
+    "Method": "Register",
+    "RelativePath": "api/users/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCredentialsDTO",
+        "Type": "MoviesNetAPI.DTOs.UserCredentialsDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MoviesNetAPI.DTOs.AuthenticationResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoviesNetAPI.Controllers.UsersController",
+    "Method": "RemoveAdmin",
+    "RelativePath": "api/users/removeadmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editClaimDTO",
+        "Type": "MoviesNetAPI.DTOs.EditClaimDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoviesNetAPI.Controllers.UsersController",
+    "Method": "GetUsers",
+    "RelativePath": "api/users/usersList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecordsPerPage",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MoviesNetAPI.DTOs.UserDTO, MoviesNetAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

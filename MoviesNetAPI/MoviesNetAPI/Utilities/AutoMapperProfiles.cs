@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using MoviesNetAPI.DTOs;
 using MoviesNetAPI.Entities;
 using NetTopologySuite.Geometries;
@@ -13,21 +14,24 @@ namespace MoviesNetAPI.Utilities
             ConfigureActors();
             ConfigureTheaters(geometryFactory);
             ConfigureMovies();
+            ConfigureUsers();
+        }
+
+        private void ConfigureUsers()
+        {
+            CreateMap<IdentityUser, UserDTO>();
         }
 
         private void ConfigureMovies()
         {
-            CreateMap<MovieCreationDTO, Movie>()
-                 .ForMember(ent => ent.Poster, options => options.Ignore())
-                 .ForMember(ent => ent.MoviesGenres, dto =>
-                 dto.MapFrom(p => p.GenresIds!.Select(id => new MovieGenre { GenreId = id })))
-                 .ForMember(ent => ent.MoviesTheaters, dto =>
-                 dto.MapFrom(p => p.TheatersIds!.Select(id => new MovieTheater { TheaterId = id })))
-                 .ForMember(ent => ent.MoviesActors, dto =>
-                 dto.MapFrom(p => p.Actors!.Select(actor =>
-                 new MovieActor { ActorId = actor.Id, Character = actor.Character })));
+            CreateMap<MovieCreationDTO, Movie>();
 
-            CreateMap<Movie, MovieDTO>();
+            CreateMap<Movie, MovieDTO>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
+                .ForMember(dest => dest.Trailer, opt => opt.MapFrom(src => src.Trailer))
+                .ForMember(dest => dest.ReleaseDate, opt => opt.MapFrom(src => src.ReleaseDate))
+                .ForMember(dest => dest.Poster, opt => opt.MapFrom(src => src.Poster));
 
             CreateMap<Movie, MovieDetailsDTO>()
                 .ForMember(dto => dto.Genres, ent => ent.MapFrom(p => p.MoviesGenres))
