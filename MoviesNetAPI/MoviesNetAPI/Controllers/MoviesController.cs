@@ -160,7 +160,6 @@ namespace MoviesNetAPI.Controllers
         [HttpPost]
         public async Task<CreatedAtRouteResult> Post([FromForm]MovieCreationDTO movieCreationDTO)
         {
-            Console.WriteLine(movieCreationDTO.Poster == null ? "NO FILE" : "FILE RECEIVED");
             var movie = mapper.Map<Movie>(movieCreationDTO);
 
             if (movieCreationDTO.Poster is not null)
@@ -215,6 +214,11 @@ namespace MoviesNetAPI.Controllers
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(int id, [FromForm] MovieCreationDTO movieCreationDTO)
         {
+            if (!ModelState.IsValid)
+    {
+        return BadRequest(ModelState);
+    }
+
             var movie = await context.Movies
                 .Include(p => p.MoviesActors)
                 .Include(p => p.MoviesGenres)
@@ -252,9 +256,9 @@ namespace MoviesNetAPI.Controllers
                 return NotFound();
             }
 
+            await fileStorage.Delete(movie.Poster, container);
             context.Remove(movie);
             await context.SaveChangesAsync();
-            await fileStorage.Delete(movie.Poster, container);
             await outputCacheStore.EvictByTagAsync(cacheTag, default);
 
             return NoContent();

@@ -10,6 +10,7 @@ import formatDate from "../../../utils/formatDate";
 import convertMovieToFormData from "../utils/convertMovieToFormData";
 import type { AxiosError } from "axios";
 import extractErrors from "../../../utils/extractErrors";
+import Swal from "sweetalert2";
 
 export default function EditMovie() {
   const { id } = useParams();
@@ -26,6 +27,10 @@ export default function EditMovie() {
         releaseDate: formatDate(movie.releaseDate),
         trailer: movie.trailer,
         poster: movie.poster,
+        overview: movie.overview,
+        genresIds: movie.genres?.map((g) => g.id) || [],
+        theatersIds: movie.theaters?.map((t) => t.id) || [],
+        actors: movie.actors || [],
       };
       setModel(movieCreation);
       setMoviesPutGet(res.data);
@@ -36,13 +41,17 @@ export default function EditMovie() {
     try {
       const formData = convertMovieToFormData(data);
       await apiClient.putForm(`/movies/${id}`, formData);
-      navigate(`/movies/${id}`);
+      navigate(`/movie/${id}`);
     } catch (err) {
       const errors = extractErrors(err as AxiosError);
       setErrors(errors);
     }
-    console.log(data.poster);
     console.log(data.poster instanceof File);
+    Swal.fire({
+      title: "Success",
+      icon: "success",
+      text: "Movie updated!",
+    });
   };
 
   return (

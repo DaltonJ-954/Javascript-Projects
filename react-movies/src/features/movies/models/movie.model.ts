@@ -7,11 +7,11 @@ export default interface Movie {
     title: string;
     poster: string;
     releaseDate: string;
-    description: string;
     trailer: string;
     genres?: Genre[];
     theaters?: Theater[];
     actors?: MovieActor[];
     averageRate: number;
     userVote: number;
+    overview: string;
 }

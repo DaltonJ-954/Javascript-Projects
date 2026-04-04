@@ -75,7 +75,7 @@ export default function TypeAheadActors(props: TypeAheadActorsProps) {
               <img
                 alt="actor's image"
                 src={actor.picture}
-                style={{ height: "64px", width: "64px", marginRight: "10px" }}
+                style={{ height: "70px", width: "64px", marginRight: "10px" }}
               />
               <span>{actor.name}</span>
             </>

@@ -11,7 +11,7 @@ wwwroot\actors\0d845cee-dd6b-4cb1-96bc-6da410ea0519.jpg
 wwwroot\actors\0fa32eb2-08b9-494b-b0c3-8fe494458a6a.jpg
 wwwroot\actors\10888688-42f8-48d4-83d3-2a59a7ebed23.jpg
 wwwroot\actors\115c5aee-1ade-406f-b66a-0727b3a765b4.jpg
-wwwroot\actors\11f628ac-5ca3-429c-899d-99a8e5c71f0c.jpg
+wwwroot\actors\7f863087-48b5-4364-8d64-99d3c59fd15a.jpg
 wwwroot\actors\12784de6-0aa3-4268-a3e7-6554ee071960.jpg
 wwwroot\actors\13b14173-c3e6-43b2-8609-f0f6b3765da6.jpg
 wwwroot\actors\15059450-cc9f-4aaa-a9b6-7755db16e67e.jpg
@@ -96,7 +96,7 @@ wwwroot\actors\85a24ca2-ba1d-4f89-a4e9-838051e337cb.jpg
 wwwroot\actors\86c84c7b-8e8f-4213-9484-b9a86685f597.jpg
 wwwroot\actors\873ad53c-4985-4e06-a08c-9699b49b0c85.jpg
 wwwroot\actors\877da067-2a11-453c-a543-d0c4ed4240b6.jpg
-wwwroot\actors\886b5b33-009a-43a6-a661-a4ad43f38342.jpg
+wwwroot\actors\9c367780-ec57-4ccf-be5f-abd396c3db96.jpg
 wwwroot\actors\8d15bb7b-abba-4519-94b8-75c32b9d794b.jpg
 wwwroot\actors\91aded08-3a55-40db-a5fd-f7584528ac3f.jpg
 wwwroot\actors\967b6768-63b4-4c21-9e58-89149b4d8867.jpg
@@ -121,7 +121,7 @@ wwwroot\actors\a0758d22-4c0a-4855-99ab-974ddae2cb46.jpg
 wwwroot\actors\a26bed2c-53c1-4b6e-9788-cfc3735662f6.jpg
 wwwroot\actors\a2aec849-f197-4840-b609-2a6b98b2e00a.jpg
 wwwroot\actors\a6004bce-4ff0-4f6c-a509-428e39c3bae5.jpg
-wwwroot\actors\a63a3067-959c-48e1-8278-daf178567916.jpg
+wwwroot\actors\d657506b-5863-4156-b004-69eb4ec3c306.jpg
 wwwroot\actors\a6a41fc9-4ad2-4c82-840b-91c0898b2a12.jpg
 wwwroot\actors\a74eca09-8412-4611-b156-8cc893c7d386.jpg
 wwwroot\actors\a95877bf-841b-4e9e-8e99-d25adf5e1a79.jpg
@@ -205,7 +205,7 @@ wwwroot\actors\70c52893-ffd7-4ca4-a5e6-64f5a68ba9d5.jpg
 wwwroot\actors\20449f53-ea08-40f5-9a33-270d53524153.jpg
 wwwroot\actors\d2ef1f3f-e440-4571-8954-146ed2f6d2e4.jpg
 wwwroot\actors\09597299-0b41-4b23-b804-50e7601fae60.jpg
-wwwroot\actors\c1b4a7d2-54d6-4950-8760-8ddca3884516.jpg
+wwwroot\actors\4c0128a2-b8f5-43aa-8607-6b7cb1bb0e9c.jpg
 wwwroot\actors\f77011be-7431-4dbc-865a-cf5e6296e1a5.jpg
 wwwroot\actors\4abb9245-3cc5-40ce-81a2-c7db26413847.jpg
 wwwroot\actors\5515315a-0f66-40e1-bb4a-6b546d72c01f.jpg
@@ -225,7 +225,7 @@ wwwroot\actors\b79ce101-68ba-48f3-8e0a-1c5866219fed.jpg
 wwwroot\actors\7d039f34-e7d8-4932-bf35-3ca764f8fd79.jpg
 wwwroot\movies\ffee2c73-19cd-44df-ab51-5005f2662421.jpg
 wwwroot\movies\e83d858b-c983-491b-8e0e-6b07b7d68dfa.jpg
-wwwroot\actors\6a86395c-08d7-459b-ae56-101f0067eb1c.jpg
+wwwroot\actors\4f835ceb-115b-4bd2-a277-2a568a0f2dac.jpg
 wwwroot\actors\5ff2504e-6acb-4a42-9743-9a1a7e6ecf2b.jpg
 wwwroot\actors\1b6fab71-2af1-46c5-b52e-a888dbce82f9.jpg
 wwwroot\actors\ed430477-7555-4bdb-a125-339995870737.jpg
@@ -340,4 +340,16 @@ wwwroot\actors\00a0832b-3042-499e-84d7-5774b9b0f670.jpg
 wwwroot\actors\e83c7acd-ffc8-4280-8dda-3ecaa2e92323.jpg
 wwwroot\actors\4753fce5-8ab6-4234-924c-23c59a4a3805.jpg
 wwwroot\movies\37847517-9b2d-46d0-9214-ad963f21640e.jpg
-wwwroot\movies\fd9bfc72-9746-42d6-b8d3-9129ed1364dd.jpg
+wwwroot\movies\9ca21c0f-4a5e-4a9c-907d-5fd62898ed6a.jpg
+wwwroot\movies\e4b1862b-9554-446b-bb03-60e2acf00dc3.jpg
+wwwroot\movies\0889345f-8e27-4b42-81c0-13277e02bc99.jpg
+wwwroot\movies\eb12c792-548d-4444-bd48-aa37de5c2953.jpg
+wwwroot\movies\b6f9d41d-2edd-444d-a5c8-f3c9ebc12a58.jpg
+wwwroot\movies\0b51eaf7-272f-40c1-975f-743eec7fea88.jpg
+wwwroot\movies\545ca01b-b53b-4002-8f20-40de69784dbe.jpg
+wwwroot\movies\dfdda2bd-8e3e-4766-98f2-73d291decf53.jpg
+wwwroot\movies\edb4ba23-ee25-4f9a-88d1-ad4a5f8d4a47.jpg
+wwwroot\movies\ebabe222-68ce-4ea8-8c7e-63d70ff36135.jpg
+wwwroot\movies\f252570c-8c7c-4c0a-b5ee-5958fc585ec6.jpg
+wwwroot\movies\a28ae649-75cc-4cbe-a755-60a560d179d5.jpg
+wwwroot\movies\a1ddf2b8-e260-44a6-8d4c-b951860135dc.jpg

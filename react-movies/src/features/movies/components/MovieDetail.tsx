@@ -15,7 +15,7 @@ export default function MovieDetail() {
   const [movie, setMovie] = useState<Movie>();
 
   useEffect(() => {
-    apiClient.get(`/movies/${id}`).then((res) => {
+    apiClient.get<Movie>(`/movies/${id}`).then((res) => {
       setMovie(res.data);
     });
   }, [id]);
@@ -30,13 +30,32 @@ export default function MovieDetail() {
 
   function getYoutubeEmbedUrl(url?: string): string | undefined {
     if (!url) return;
-    const objUrl = new URL(url);
-    let videoId = objUrl.searchParams.get("v");
 
-    if (!videoId && objUrl.hostname.includes("youtube")) {
-      videoId = objUrl.pathname.slice(1);
+    try {
+      const objUrl = new URL(url);
+      let videoId: string | null = null;
+
+      // Standard YouTube URL
+      if (objUrl.hostname.includes("youtu.be.com")) {
+        videoId = objUrl.searchParams.get("v");
+
+        // Handle /embed/, /shorts/, etc.
+        if (!videoId) {
+          const pathParts = objUrl.pathname.split("/");
+          videoId = pathParts[2] || pathParts[1];
+        }
+      }
+
+      // Shortened youtube URL
+      if (objUrl.hostname.includes("youtu.be")) {
+        videoId = objUrl.pathname.slice(1).replace(/[^a-zA-Z0-9_-]/g, "");
+      }
+
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : undefined;
+    } catch {
+      console.warn("Invalid YouTube URL:", url);
+      return;
     }
-    return videoId ? `https://www.youtube.com/embed/${videoId}` : undefined;
   }
 
   function transformCoordinates(): Coordinate[] | undefined {
@@ -100,22 +119,59 @@ export default function MovieDetail() {
               src={movie.poster}
               alt={movie.title}
               style={{
-                maxWidth: "225px",
-                maxHeight: "315px",
+                width: "225px",
+                height: "320px",
                 borderRadius: "5px",
+                borderBottomStyle: "solid",
+                borderBottomWidth: "2px",
+                borderBottomColor: "ivory",
+                marginRight: "20px",
               }}
             />
           </span>
           <div>
             <iframe
               width="565"
-              height="315"
+              height="320"
               title="trailer"
               allowFullScreen
               src={getYoutubeEmbedUrl(movie.trailer)}
-              style={{ borderRadius: "5px" }}
+              style={{
+                borderBottomStyle: "solid",
+                borderBottomWidth: "2px",
+                borderBottomColor: "ivory",
+                borderRadius: "5px",
+              }}
             ></iframe>
           </div>
+          {/* <span
+            className="d-inline-block me-4"
+            style={{
+              marginLeft: "20px",
+              borderRadius: "5px",
+            }}
+          >
+            <div
+              style={{
+                flex: 1, // ← takes remaining space
+                width: "290px",
+
+                height: "320px",
+                overflow: "auto",
+                border: "1px solid black",
+                padding: "10px",
+                borderRadius: "5px",
+                backgroundColor: "lightgrey",
+                marginInlineStart: "20px",
+              }}
+            >
+              <Description
+                movieOverview={
+                  movie.overview || "No description at the moment."
+                }
+              />
+            </div>
+          </span> */}
         </div>
 
         {movie.actors && movie.actors.length > 0 && (

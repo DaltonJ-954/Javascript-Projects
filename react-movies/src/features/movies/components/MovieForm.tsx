@@ -44,9 +44,11 @@ export default function MovieForm(props: MovieFormProps) {
       title: "",
       releaseDate: "",
       trailer: "",
+      poster: "",
       genresIds: [],
       theatersIds: [],
       actors: [],
+      overview: "",
     },
   });
 

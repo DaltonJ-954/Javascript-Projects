@@ -12,6 +12,7 @@ import type Movie from "../models/movie.model";
 import { useNavigate } from "react-router";
 import extractErrors from "../../../utils/extractErrors";
 import { AxiosError } from "axios";
+import Swal from "sweetalert2";
 
 export default function CreateMovie() {
   const [nonSelectedGenres, setNonSelectedGenres] = useState<Genre[]>([]);
@@ -31,13 +32,19 @@ export default function CreateMovie() {
   const onSubmit: SubmitHandler<MovieCreation> = async (data) => {
     try {
       const formData = convertMovieToFormData(data);
-      const response = await apiClient.postForm<Movie>("/movies/", formData);
+      const response = await apiClient.postForm<Movie>("/movies", formData);
       const movie = response.data;
       navigate(`/movies/${movie.id}`);
     } catch (err) {
       const errors = extractErrors(err as AxiosError);
       setErrors(errors);
     }
+    console.log(data.poster instanceof File);
+    Swal.fire({
+      title: "Success",
+      icon: "success",
+      text: "Your movie was successfully created!",
+    });
   };
 
   return (
