@@ -5,6 +5,7 @@ import { useContext } from "react";
 import AuthenticationContext from "../../security/utils/AuthenticationContext";
 import Button from "../../../components/Button";
 import { logout } from "../../security/utils/HandleJWT";
+import { Element } from "react-scroll";
 
 export default function Menu() {
   const { claims, update } = useContext(AuthenticationContext);
@@ -16,12 +17,19 @@ export default function Menu() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <NavLink to="/" className="navbar-brand">
-          React Movies
-        </NavLink>
+        <Element name="top">
+          <NavLink
+            to="/"
+            className="nav-link"
+            style={{ fontWeight: "bold", marginRight: "15px" }}
+          >
+            React Movies
+          </NavLink>
+        </Element>
 
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            {/* Existing */}
             <li className="nav-item-left">
               <NavLink to="/movies/filter" className="nav-link">
                 Filter Movies
