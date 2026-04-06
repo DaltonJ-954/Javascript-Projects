@@ -11,8 +11,9 @@ export default function LandingPage() {
   });
 
   useEffect(() => {
+    console.log("Movies in ticker:", movies);
     loadRecords();
-  }, []);
+  }, [movies]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   async function loadRecords() {
@@ -28,9 +29,18 @@ export default function LandingPage() {
   return (
     <>
       <AlertContext.Provider value={() => loadRecords()}>
-        <h1>In Theaters</h1>
+        <div className="d-flex align-items-center gap-3 mb-3">
+          <h2 className="mb-0">In Theaters</h2>
+          <span
+            className="badge bg-secondary mt-3"
+            style={{ fontSize: "0.8rem" }}
+          >
+            Welcome to React Movies! Explore the latest releases and upcoming
+            movies. Enjoy your movie journey!
+          </span>
+        </div>
         <MoviesList movies={movies.inTheaters ?? []} />
-        <h1 className="mt-5">Upcoming Releases</h1>
+        <h2 className="mt-5">Upcoming Releases</h2>
         <MoviesList movies={movies.upcomingReleases ?? []} />
       </AlertContext.Provider>
     </>
