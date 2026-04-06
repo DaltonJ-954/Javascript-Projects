@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\dtos\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:dtos\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\utilities\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:utilities\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\entities\\theater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:entities\\theater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MovieDTO.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\MovieDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\MovieDTO.cs",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\MovieDTO.cs",
-              "RelativeToolTip": "DTOs\\MovieDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T17:27:51.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MoviesController.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\MoviesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MoviesController.cs",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\MoviesController.cs",
-              "RelativeToolTip": "Controllers\\MoviesController.cs",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAAADoAAAAnAAAAAAAAAA==",
+              "Title": "Theater.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Entities\\Theater.cs",
+              "RelativeDocumentMoniker": "Entities\\Theater.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Entities\\Theater.cs",
+              "RelativeToolTip": "Entities\\Theater.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T18:54:48.38Z",
+              "WhenOpened": "2026-04-05T17:18:59.67Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AutoMapperProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Utilities\\AutoMapperProfiles.cs",
-              "RelativeDocumentMoniker": "Utilities\\AutoMapperProfiles.cs",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Utilities\\AutoMapperProfiles.cs",
-              "RelativeToolTip": "Utilities\\AutoMapperProfiles.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAIwFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T18:33:48.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ActorsController.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\ActorsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ActorsController.cs",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Controllers\\ActorsController.cs",
-              "RelativeToolTip": "Controllers\\ActorsController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAHgAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T17:30:49.367Z"
             }
           ]
         }

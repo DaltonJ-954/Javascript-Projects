@@ -20,7 +20,11 @@ export default function DisplayMovie(props: DisplayMovieProps) {
   return (
     <div className={styles.div}>
       <NavLink to={buildLink()}>
-        <img src={props.movie.poster} alt="Poster" />
+        <img
+          style={{ borderRadius: "5px" }}
+          src={props.movie.poster}
+          alt="Poster"
+        />
       </NavLink>
       <p>
         <NavLink to={buildLink()}>{props.movie.title}</NavLink>

@@ -3,6 +3,7 @@ import type Theater from "../../theaters/models/Theater.model";
 import type MovieActor from "./MovieActor.model";
 
 export default interface Movie {
+    release_date: string | number | Date;
     id: number;
     title: string;
     poster: string;
