@@ -114,18 +114,17 @@ export default function MovieDetail() {
         </p>
 
         <div className="d-flex">
-          <span className="d-inline-block me-4">
+          <span className="d-inline-block me-5">
             <img
               src={movie.poster}
               alt={movie.title}
               style={{
-                width: "225px",
+                width: "235px",
                 height: "320px",
                 borderRadius: "5px",
                 borderBottomStyle: "solid",
                 borderBottomWidth: "2px",
                 borderBottomColor: "ivory",
-                marginRight: "20px",
               }}
             />
           </span>
