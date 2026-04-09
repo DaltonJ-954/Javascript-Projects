@@ -347,7 +347,7 @@ wwwroot\movies\eb12c792-548d-4444-bd48-aa37de5c2953.jpg
 wwwroot\movies\b6f9d41d-2edd-444d-a5c8-f3c9ebc12a58.jpg
 wwwroot\movies\0b51eaf7-272f-40c1-975f-743eec7fea88.jpg
 wwwroot\movies\545ca01b-b53b-4002-8f20-40de69784dbe.jpg
-wwwroot\movies\dfdda2bd-8e3e-4766-98f2-73d291decf53.jpg
+wwwroot\movies\61e7684d-bd2e-4189-b022-fa365d11c7ba.jpg
 wwwroot\movies\edb4ba23-ee25-4f9a-88d1-ad4a5f8d4a47.jpg
 wwwroot\movies\ebabe222-68ce-4ea8-8c7e-63d70ff36135.jpg
 wwwroot\movies\f252570c-8c7c-4c0a-b5ee-5958fc585ec6.jpg

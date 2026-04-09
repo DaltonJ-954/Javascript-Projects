@@ -1168,6 +1168,22 @@
           }
         }
       },
+      "Scalar.AspNetCore/2.13.20": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Swashbuckle.AspNetCore.Swagger/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -3855,6 +3871,25 @@
         "nettopologysuite.io.sqlserverbytes.nuspec"
       ]
     },
+    "Scalar.AspNetCore/2.13.20": {
+      "sha512": "KLWQcH0YisMa0nzv36S5TcKgZ5seAaTHXVcdG8S3H0UFFtAeBYwSOnzme6S9Ch1Tl9trpa0G8aiCjzF9H9khTw==",
+      "type": "package",
+      "path": "scalar.aspnetcore/2.13.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net10.0/Scalar.AspNetCore.dll",
+        "lib/net10.0/Scalar.AspNetCore.xml",
+        "lib/net8.0/Scalar.AspNetCore.dll",
+        "lib/net8.0/Scalar.AspNetCore.xml",
+        "lib/net9.0/Scalar.AspNetCore.dll",
+        "lib/net9.0/Scalar.AspNetCore.xml",
+        "scalar.aspnetcore.2.13.20.nupkg.sha512",
+        "scalar.aspnetcore.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore.Swagger/9.0.0": {
       "sha512": "xQw4L8S//eqxAuVLn8mvGCpz2cqfuTEUtFBdaWJ/YkQd8dnCXMfAlBhbLCrZrBcl0R9KhQLtW8EU+V2RGv1pkw==",
       "type": "package",
@@ -4944,6 +4979,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
+      "Scalar.AspNetCore >= 2.13.20",
       "Swashbuckle.AspNetCore.SwaggerGen >= 9.0.0",
       "Swashbuckle.AspNetCore.SwaggerUI >= 9.0.0"
     ]
@@ -5038,6 +5074,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "Scalar.AspNetCore": {
+            "target": "Package",
+            "version": "[2.13.20, )"
           },
           "Swashbuckle.AspNetCore.SwaggerGen": {
             "target": "Package",

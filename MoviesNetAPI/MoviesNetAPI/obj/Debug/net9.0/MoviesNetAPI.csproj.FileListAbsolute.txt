@@ -331,3 +331,4 @@ C:\Users\scall\OneDrive\Documents\GitHub\Javascript-Projects\MoviesNetAPI\Movies
 C:\Users\scall\OneDrive\Documents\GitHub\Javascript-Projects\MoviesNetAPI\MoviesNetAPI\obj\Debug\net9.0\ref\MoviesNetAPI.dll
 C:\Users\scall\OneDrive\Documents\GitHub\Javascript-Projects\MoviesNetAPI\MoviesNetAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\scall\OneDrive\Documents\GitHub\Javascript-Projects\MoviesNetAPI\MoviesNetAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\scall\OneDrive\Documents\GitHub\Javascript-Projects\MoviesNetAPI\MoviesNetAPI\bin\Debug\net9.0\Scalar.AspNetCore.dll

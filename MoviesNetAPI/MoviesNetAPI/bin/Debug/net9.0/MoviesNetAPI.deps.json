@@ -17,6 +17,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite": "9.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.0",
+          "Scalar.AspNetCore": "2.13.20",
           "Swashbuckle.AspNetCore.SwaggerGen": "9.0.0",
           "Swashbuckle.AspNetCore.SwaggerUI": "9.0.0"
         },
@@ -802,6 +803,14 @@
           }
         }
       },
+      "Scalar.AspNetCore/2.13.20": {
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "assemblyVersion": "2.13.20.0",
+            "fileVersion": "2.13.20.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/9.0.0": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.23"
@@ -1470,6 +1479,13 @@
       "sha512": "sha512-R4BcV19f2l6EjHSjh/EHwLhYQHrOov9vig1EW5oBm0iqlZOgaIJm5tBnlbFnYlvdYOPuf5p0Qtf8PCVwH77Wbg==",
       "path": "nettopologysuite.io.sqlserverbytes/2.1.0",
       "hashPath": "nettopologysuite.io.sqlserverbytes.2.1.0.nupkg.sha512"
+    },
+    "Scalar.AspNetCore/2.13.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KLWQcH0YisMa0nzv36S5TcKgZ5seAaTHXVcdG8S3H0UFFtAeBYwSOnzme6S9Ch1Tl9trpa0G8aiCjzF9H9khTw==",
+      "path": "scalar.aspnetcore/2.13.20",
+      "hashPath": "scalar.aspnetcore.2.13.20.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.Swagger/9.0.0": {
       "type": "package",

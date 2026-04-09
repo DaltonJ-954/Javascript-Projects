@@ -2,8 +2,8 @@
 {
     public class MoviesPostGetDTO
     {
-        public List<GenreDTO> Genres { get; set; } = new List<GenreDTO>();
-        public List<TheaterDTO> Theaters { get; set; } = new List<TheaterDTO>();
-        public List<ActorDTO> Actors { get; set; } = new List<ActorDTO>();
+        public List<GenreDTO> Genres { get; set; } = [];
+        public List<TheaterDTO> Theaters { get; set; } = [];
+        public List<ActorDTO> Actors { get; set; } = [];
     }
 }

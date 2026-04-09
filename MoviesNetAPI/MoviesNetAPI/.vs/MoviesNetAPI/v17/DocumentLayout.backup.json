@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\entities\\theater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:entities\\theater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\dtos\\landingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:dtos\\landingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\moviesnetapi\\moviesnetapi\\dtos\\movieactordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F10BE0-9921-F5F5-6D01-93BB641401E6}|MoviesNetAPI.csproj|solutionrelative:dtos\\movieactordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,20 +21,52 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 271,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MovieActorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\MovieActorDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\MovieActorDTO.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\MovieActorDTO.cs",
+              "RelativeToolTip": "DTOs\\MovieActorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T20:09:06.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LandingDTO.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\LandingDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\LandingDTO.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\DTOs\\LandingDTO.cs",
+              "RelativeToolTip": "DTOs\\LandingDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T20:09:04.532Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Theater.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Entities\\Theater.cs",
-              "RelativeDocumentMoniker": "Entities\\Theater.cs",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\Entities\\Theater.cs",
-              "RelativeToolTip": "Entities\\Theater.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\MoviesNetAPI\\MoviesNetAPI\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T17:18:59.67Z",
+              "WhenOpened": "2026-04-08T20:06:33.368Z",
               "EditorCaption": ""
             }
           ]

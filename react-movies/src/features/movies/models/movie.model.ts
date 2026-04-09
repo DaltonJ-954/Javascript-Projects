@@ -7,6 +7,7 @@ export default interface Movie {
     id: number;
     title: string;
     poster: string;
+    imageLanding: string;
     releaseDate: string;
     trailer: string;
     genres?: Genre[];

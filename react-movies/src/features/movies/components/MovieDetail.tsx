@@ -13,6 +13,7 @@ import { UserIsLoggedIn } from "../../security/utils/HandleJWT";
 export default function MovieDetail() {
   const { id } = useParams();
   const [movie, setMovie] = useState<Movie>();
+  console.log(movie);
 
   useEffect(() => {
     apiClient.get<Movie>(`/movies/${id}`).then((res) => {
@@ -138,7 +139,6 @@ export default function MovieDetail() {
               style={{
                 borderBottomStyle: "solid",
                 borderBottomWidth: "2px",
-                borderBottomColor: "ivory",
                 borderRadius: "5px",
               }}
             ></iframe>
