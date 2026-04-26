@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\data\\wanderlydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:data\\wanderlydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\services\\yelpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:services\\yelpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\controllers\\placescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:controllers\\placescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\models\\userpreferencecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:models\\userpreferencecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\models\\userpreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:models\\userpreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|c:\\users\\scall\\onedrive\\documents\\github\\javascript-projects\\wanderly.api\\controllers\\recommendationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E057F736-20A0-4100-3B5C-F2458A402FCB}|Wanderly.API.csproj|solutionrelative:controllers\\recommendationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,66 +43,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-10T01:38:11.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlacesController.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Controllers\\PlacesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PlacesController.cs",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Controllers\\PlacesController.cs",
-              "RelativeToolTip": "Controllers\\PlacesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Title": "UserPreferenceCategory.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Models\\UserPreferenceCategory.cs",
+              "RelativeDocumentMoniker": "Models\\UserPreferenceCategory.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Models\\UserPreferenceCategory.cs",
+              "RelativeToolTip": "Models\\UserPreferenceCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T01:19:51.954Z",
+              "WhenOpened": "2026-04-26T01:45:05.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-10T01:17:04.825Z",
+              "Title": "UserPreference.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Models\\UserPreference.cs",
+              "RelativeDocumentMoniker": "Models\\UserPreference.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Models\\UserPreference.cs",
+              "RelativeToolTip": "Models\\UserPreference.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T01:19:37.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "Title": "RecommendationController.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Controllers\\RecommendationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RecommendationController.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Controllers\\RecommendationController.cs",
+              "RelativeToolTip": "Controllers\\RecommendationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T01:10:10.02Z",
+              "WhenOpened": "2026-04-26T00:54:52.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "YelpService.cs",
               "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Services\\YelpService.cs",
               "RelativeDocumentMoniker": "Services\\YelpService.cs",
               "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Services\\YelpService.cs",
               "RelativeToolTip": "Services\\YelpService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAtwFUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T01:07:20.439Z",
+              "WhenOpened": "2026-04-26T00:12:26.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WanderlyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Data\\WanderlyDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\WanderlyDbContext.cs",
+              "ToolTip": "C:\\Users\\scall\\OneDrive\\Documents\\GitHub\\Javascript-Projects\\Wanderly.API\\Data\\WanderlyDbContext.cs",
+              "RelativeToolTip": "Data\\WanderlyDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T00:08:14.492Z",
               "EditorCaption": ""
             }
           ]

@@ -4,12 +4,8 @@ using MoviesNetAPI.Entities;
 
 namespace MoviesNetAPI
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext(DbContextOptions options) : IdentityDbContext(options)
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
-        { 
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
