@@ -1,0 +1,197 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Wanderly.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/preferences/{userId}": {
+      "get": {
+        "tags": [
+          "Preference"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Preference"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreference"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreference"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreference"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/preferences": {
+      "post": {
+        "tags": [
+          "Preference"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreference"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreference"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreference"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/recommendations/{userId}": {
+      "get": {
+        "tags": [
+          "Recommendation"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "latitude",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "longitude",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UserPreference": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "radius": {
+            "type": "number",
+            "format": "double"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferenceCategory"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferenceCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userPreferenceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userPreference": {
+            "$ref": "#/components/schemas/UserPreference"
+          },
+          "categoryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Preference"
+    },
+    {
+      "name": "Recommendation"
+    }
+  ]
+}

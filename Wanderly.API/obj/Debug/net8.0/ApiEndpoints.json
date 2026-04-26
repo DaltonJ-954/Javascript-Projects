@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "Wanderly.API.Controllers.PreferenceController",
+    "Method": "CreatePreference",
+    "RelativePath": "api/preferences",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "preference",
+        "Type": "UserPreference",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wanderly.API.Controllers.PreferenceController",
+    "Method": "Get",
+    "RelativePath": "api/preferences/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wanderly.API.Controllers.PreferenceController",
+    "Method": "Update",
+    "RelativePath": "api/preferences/{userId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updated",
+        "Type": "UserPreference",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wanderly.API.Controllers.RecommendationController",
+    "Method": "Get",
+    "RelativePath": "api/recommendations/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "longitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

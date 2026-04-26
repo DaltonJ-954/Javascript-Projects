@@ -1,12 +1,70 @@
 [
   {
-    "ContainingType": "Wanderly.API.Controllers.PlacesController",
-    "Method": "GetNearby",
-    "RelativePath": "api/Places/nearby",
+    "ContainingType": "Wanderly.API.Controllers.PreferenceController",
+    "Method": "CreatePreference",
+    "RelativePath": "api/preferences",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "preference",
+        "Type": "Wanderly.API.Models.UserPreference",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wanderly.API.Controllers.PreferenceController",
+    "Method": "Get",
+    "RelativePath": "api/preferences/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wanderly.API.Controllers.PreferenceController",
+    "Method": "Update",
+    "RelativePath": "api/preferences/{userId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updated",
+        "Type": "Wanderly.API.Models.UserPreference",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wanderly.API.Controllers.RecommendationController",
+    "Method": "GetRecommendatios",
+    "RelativePath": "api/recommendations/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
       {
         "Name": "latitude",
         "Type": "System.Double",
@@ -19,24 +77,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Program\u002B\u003C\u003Ec__DisplayClass0_0",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0",
-    "RelativePath": "weatherforecast",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "WeatherForecast[]",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]
