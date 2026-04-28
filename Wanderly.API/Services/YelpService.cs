@@ -20,6 +20,52 @@ namespace Wanderly.API.Services
             this.context = context;
         }
 
+        public async Task<List<BusinessDto>> SearchByCategoriesAsync(
+            List<string> categories,
+            double latitude,
+            double longitude,
+            double radius)
+        {
+            if (categories == null || !categories.Any())
+                return new List<BusinessDto>();
+
+            var categoryQuery = string.Join(",", categories);
+
+            var apiKey = config["Yelp:ApiKey"];
+
+            var url = $"https://api.yelp.com/v3/businesses/search?latitude={latitude}&longitude={longitude}&categories={categoryQuery}&radius={(int)radius}&limit=10";
+
+            var request = new HttpRequestMessage(HttpMethod.Get, url);
+            request.Headers.Authorization =
+                new AuthenticationHeaderValue("Bearer", apiKey);
+
+            var response = await httpClient.SendAsync(request);
+            var content = await response.Content.ReadAsStringAsync();
+
+            if (!response.IsSuccessStatusCode)
+                throw new Exception(content);
+
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+            };
+
+            var yelpData = JsonSerializer.Deserialize<YelpResponse>(content, options);
+
+            if (yelpData?.businesses == null)
+                return [];
+
+            return yelpData.businesses.Select(b => new BusinessDto
+            {
+                Id = b.Id,
+                Name = b.name,
+                Rating = b.rating,
+                Address = b.location?.address1,
+                Distance = b.distance,
+                Categories = [.. b.categories.Select(c => c.title)]
+            }).ToList();
+        }
+
         // ✅ UPDATED SIGNATURE (no more UserPreference parameter)
         public async Task<List<BusinessDto>> GetNearbyAsync(
             string userId,
@@ -72,6 +118,7 @@ namespace Wanderly.API.Services
             // 🔹 STEP 4: Map Yelp → DTO
             var businesses = yelpData.businesses.Select(b => new BusinessDto
             {
+                Id = b.Id,
                 Name = b.name,
                 Rating = b.rating,
                 Address = b.location?.address1,

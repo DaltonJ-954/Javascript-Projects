@@ -11,7 +11,7 @@ using Wanderly.API.Data;
 namespace Wanderly.API.Migrations
 {
     [DbContext(typeof(WanderlyDbContext))]
-    [Migration("20260426021032_InitialCreate")]
+    [Migration("20260426035212_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

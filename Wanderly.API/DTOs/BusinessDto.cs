@@ -2,6 +2,7 @@
 {
     public class BusinessDto
     {
+        public string Id { get; set; } = null!;
         public string Name { get; set; } = null!;
         public double Rating { get; set; }
         public string Address { get; set; } = null!;

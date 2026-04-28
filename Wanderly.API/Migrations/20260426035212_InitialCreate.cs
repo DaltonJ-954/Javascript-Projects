@@ -10,9 +10,19 @@ namespace Wanderly.API.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "Categories",
-                table: "UserPreferences");
+            migrationBuilder.CreateTable(
+                name: "UserPreferences",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Radius = table.Column<double>(type: "float", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserPreferences", x => x.Id);
+                });
 
             migrationBuilder.CreateTable(
                 name: "UserPreferenceCategories",
@@ -46,12 +56,8 @@ namespace Wanderly.API.Migrations
             migrationBuilder.DropTable(
                 name: "UserPreferenceCategories");
 
-            migrationBuilder.AddColumn<string>(
-                name: "Categories",
-                table: "UserPreferences",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "");
+            migrationBuilder.DropTable(
+                name: "UserPreferences");
         }
     }
 }

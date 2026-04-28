@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Wanderly.API.Data;
+using Wanderly.API.Infrastructure.BackgroundServices;
+using Wanderly.API.Repositories;
 using Wanderly.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +15,11 @@ builder.Services.AddControllers();
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<YelpService>();
+builder.Services.AddSignalR();
 
+builder.Services.AddScoped<IUserPreferenceRepository, UserPreferenceRepository>();
+builder.Services.AddHostedService<YelpPollingService>();
+builder.Services.AddHttpClient<YelpService>();
 
 // Add DbContext
 builder.Services.AddDbContext<WanderlyDbContext>(options =>

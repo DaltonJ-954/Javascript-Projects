@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
 using Wanderly.API.Models;
 
 namespace Wanderly.API.Data
@@ -22,6 +21,6 @@ namespace Wanderly.API.Data
 
         public DbSet<UserPreference> UserPreferences { get; set; }
         public DbSet<UserPreferenceCategory> UserPreferenceCategories { get; set; }
-
+        public DbSet<SentNotification> SentNotifications { get; set; }
     }
 }

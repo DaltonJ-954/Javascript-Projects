@@ -2,11 +2,12 @@
 {
     public class YelpResponse
     {
-        public List<YelpBusiness> businesses { get; set; }
+        public List<YelpBusiness>? businesses { get; set; }
     }
 
     public class YelpBusiness
     {
+        public string Id { get; set; } = null!;
         public string name { get; set; } = null!;
         public double rating { get; set; }
         public double distance { get; set; }
